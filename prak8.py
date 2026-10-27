@@ -53,3 +53,16 @@ def submit_nilai():
     conn.close()
 
     messagebox.showinfo("Hasil Prediksi", f"Prediksi Fakultas: {hasil_prediksi}")
+
+    entry_nama.delete(0, tk.END)
+    entry_bio.delete(0, tk.END)
+    entry_fis.delete(0, tk.END)
+    entry_ing.delete(0, tk.END)
+
+def on_enter(e):
+    btn_submit["bg"] = "#50fa7b"
+    btn_submit["fg"] = "black"
+
+def on_leave(e):
+    btn_submit["bg"] = "#44475a"
+    btn_submit["fg"] = "black"
