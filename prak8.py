@@ -66,3 +66,31 @@ def on_enter(e):
 def on_leave(e):
     btn_submit["bg"] = "#44475a"
     btn_submit["fg"] = "black"
+
+# GUI LAYER
+root = tk.Tk()
+root.title("Prediksi Fakultas")
+
+tk.Label(root, text="Nama Siswa:").pack()
+entry_nama = tk.Entry(root)
+entry_nama.pack()
+
+tk.Label(root, text="Nilai Biologi:").pack()
+entry_bio = tk.Entry(root)
+entry_bio.pack()
+
+tk.Label(root, text="Nilai Fisika:").pack()
+entry_fis = tk.Entry(root)
+entry_fis.pack()
+
+tk.Label(root, text="Nilai Inggris:").pack()
+entry_ing = tk.Entry(root)
+entry_ing.pack()
+
+btn_submit = tk.Button(root, text="Prediksi Fakultas", command=submit_nilai)
+btn_submit.pack(pady=10)
+
+btn_submit.bind("<Enter>", on_enter)
+btn_submit.bind("<Leave>", on_leave)
+
+root.mainloop()
